@@ -61,13 +61,18 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">Anime Carousel <span className="emoji">⛩️</span></h1>
+      <h1 className="title">Anime Carousel</h1>
       <div className="carousel">
-        <img src={images[index]} alt="Anime" className="carousel-image" />
+        <img src={images[index]} alt="anime" className="carousel-image" />
       </div>
       <div className="buttons">
         <button onClick={showPrevious}>Previous</button>
         <button onClick={showNext}>Next</button>
+      </div>
+
+      {/* Footer */}
+      <div className="footer">
+        &copy; 212223220099. All rights reserved.
       </div>
     </div>
   );
@@ -78,69 +83,80 @@ export default App;
 ```
 app.css
 ```
-.carousel-container {
+.app {
   text-align: center;
-  background-color: #1e1e1e;
-  color: white;
-  min-height: 100vh;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-color: purple;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Carousel container */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+/* Updated image styling */
 .carousel-image {
   width: 600px;
   height: 400px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-image:hover {
+  transform: scale(1.03);
 }
 
-.nav-buttons {
+/* Navigation buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
   margin-top: 20px;
 }
 
-.nav-buttons button {
-  padding: 10px 20px;
-  margin: 0 10px;
+.buttons button {
+  padding: 12px 24px;
   font-size: 16px;
-  background-color: #f0a500;
+  background-color: black;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  color: white;
   cursor: pointer;
-  color: #fff;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-.nav-buttons button:hover {
-  background-color: #d48806;
+.buttons button:hover {
+  background-color: black;
 }
 
-.dots {
-  margin-top: 15px;
+/* Footer styling */
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid black;
 }
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #f0a500;
-}
-
 ```
 
 
 ## OUTPUT:
-![web ex 5 2](https://github.com/user-attachments/assets/21b3500e-0c62-451c-94ad-be76a46be9ca)
+![image](https://github.com/user-attachments/assets/ad44a6cb-9bbb-4101-8ff2-cad830f6b759)
 
-![web ex 5](https://github.com/user-attachments/assets/f8e98dcf-197c-4adb-a7bd-821b7c3d16ef)
+![image](https://github.com/user-attachments/assets/64c36388-a057-4bb1-bfca-e73345455aa1)
+
+![image](https://github.com/user-attachments/assets/1be50733-3a91-458b-9cb3-4b6b46300d5e)
+
 
 
 
